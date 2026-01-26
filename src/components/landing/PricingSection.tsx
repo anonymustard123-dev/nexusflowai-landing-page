@@ -64,7 +64,7 @@ const PricingSection = () => {
 
               {/* CTA */}
               <a
-                href="https://lifestyle-lure-production.up.railway.app/"
+                href="https://app.nexusflowapp.pro/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-primary w-full text-center gap-2"
