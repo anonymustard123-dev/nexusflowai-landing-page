@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/nexusflow-logo.png";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,10 +30,11 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
-          {/* Logo */}
+          {/* Logo Section */}
           <a href="#" className="flex items-center gap-2">
+            {/* Points to the file in your /public folder */}
             <img 
-              src={logo} 
+              src="/nexus_logo.jpg" 
               alt="NexusFlowAI" 
               className="h-8 sm:h-10 w-auto"
             />
@@ -53,7 +53,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://lifestyle-lure-production.up.railway.app/"
+              href="https://app.nexusflowapp.pro/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm"
@@ -87,7 +87,7 @@ const Navbar = () => {
               </a>
             ))}
             <a
-              href="https://lifestyle-lure-production.up.railway.app/"
+              href="https://app.nexusflowapp.pro/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary w-full text-center text-sm mt-4"
