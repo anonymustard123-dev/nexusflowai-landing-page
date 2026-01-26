@@ -28,7 +28,7 @@ const tiers = [
     badge: "Unlock at 100 Referrals",
     badgeVariant: "secondary" as const,
     directCommission: "$2.25/mo",
-    networkBonus: "$0.75 Guaranteed",
+    networkBonus: "$0.75/mo",
     networkBonusExtra: "Up to $1.05/mo",
     description: "Maximize your revenue. Earn a guaranteed $0.75 network bonus on every team sale, with the potential to earn up to $1.05 by capturing unclaimed bonuses.",
     highlight: true,
@@ -87,14 +87,14 @@ const PartnerSection = () => {
                 <h3 className="text-lg font-bold text-foreground">{tier.name}</h3>
               </div>
 
-              {/* Earnings */}
-              <div className="space-y-4 mb-6">
-                {/* Direct Commission */}
-                <div className="p-4 rounded-xl bg-secondary/50">
-                  <p className="text-xs text-muted-foreground mb-1">Direct Commission</p>
-                  <p className="text-2xl font-bold text-foreground">{tier.directCommission}</p>
-                  <p className="text-xs text-muted-foreground">Per Personal Sale</p>
-                </div>
+                {/* Earnings */}
+                <div className="space-y-4 mb-6">
+                  {/* You Earn */}
+                  <div className="p-4 rounded-xl bg-secondary/50">
+                    <p className="text-xs text-muted-foreground mb-1">You Earn</p>
+                    <p className="text-2xl font-bold text-foreground">{tier.directCommission}</p>
+                    <p className="text-xs text-muted-foreground">Per Direct Sale</p>
+                  </div>
 
                 {/* Network Bonus */}
                 <div
