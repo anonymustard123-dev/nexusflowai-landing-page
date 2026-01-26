@@ -43,7 +43,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.4s" }}
           >
             <a
-              href="https://lifestyle-lure-production.up.railway.app/"
+              href="https://app.nexusflowapp.pro/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-base px-8 py-4 gap-2"
