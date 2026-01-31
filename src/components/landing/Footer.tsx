@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/nexusflow-logo.png";
 
 const Footer = () => {
@@ -16,12 +17,15 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex items-center gap-6 text-sm">
-            <a
-              href="#"
+            {/* FIX: Use Link to prevent scrolling to top */}
+            <Link
+              to="/terms"
               className="text-background/70 hover:text-background transition-colors"
             >
               Terms of Service
-            </a>
+            </Link>
+            
+            {/* Privacy Policy - left as anchor placeholder for now */}
             <a
               href="#"
               className="text-background/70 hover:text-background transition-colors"
