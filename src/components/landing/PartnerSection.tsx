@@ -39,6 +39,11 @@ const PartnerSection = () => {
       <div className="container-narrow">
         {/* Header - Headline Hook Implementation */}
         <div className="text-center mb-12">
+          {/* NEW: Affiliate Program Bubble */}
+          <span className="inline-block px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+            Affiliate Program
+          </span>
+          
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
             Earn a <span className="text-primary">$10 Monthly Bonus</span> for Every Referral
           </h2>
