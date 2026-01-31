@@ -17,21 +17,12 @@ const Footer = () => {
 
           {/* Links */}
           <div className="flex items-center gap-6 text-sm">
-            {/* FIX: Use Link to prevent scrolling to top */}
             <Link
               to="/terms"
               className="text-background/70 hover:text-background transition-colors"
             >
               Terms of Service
             </Link>
-            
-            {/* Privacy Policy - left as anchor placeholder for now */}
-            <a
-              href="#"
-              className="text-background/70 hover:text-background transition-colors"
-            >
-              Privacy Policy
-            </a>
           </div>
         </div>
 
