@@ -5,10 +5,8 @@ const benefits = [
   {
     title: "Industry-Leading Split",
     icon: Wallet,
-    badge: "50% Commission",
+    badge: "50% Referral Bonus",
     badgeVariant: "default" as const,
-    mainStat: "$10/mo",
-    subStat: "Per Active User",
     description: "We believe in true partnership. You keep 50% of the revenue for every user you refer to the platform.",
     highlight: false,
   },
@@ -17,8 +15,6 @@ const benefits = [
     icon: Repeat,
     badge: "Lifetime Income",
     badgeVariant: "secondary" as const,
-    mainStat: "Monthly",
-    subStat: "Payout Schedule",
     description: "Build a stable income stream. As long as your referral remains subscribed, you get paid every single month.",
     highlight: true,
   },
@@ -27,8 +23,6 @@ const benefits = [
     icon: TrendingUp,
     badge: "No Earnings Cap",
     badgeVariant: "secondary" as const,
-    mainStat: "Unlimited",
-    subStat: "Potential Earnings",
     description: "There are no limits on how much you can earn. Refer as many professionals as you like and watch your income scale.",
     highlight: false,
   },
@@ -70,7 +64,7 @@ const PartnerSection = () => {
               </div>
 
               {/* Header */}
-              <div className="flex items-center gap-3 mb-6">
+              <div className="flex items-center gap-3 mb-4">
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                     benefit.highlight
@@ -86,27 +80,6 @@ const PartnerSection = () => {
                 <h3 className="text-lg font-bold text-foreground">{benefit.title}</h3>
               </div>
 
-              {/* Key Stat Block */}
-              <div className="space-y-4 mb-6">
-                <div
-                  className={`p-4 rounded-xl ${
-                    benefit.highlight
-                      ? "bg-amber-100/50 border border-amber-200 dark:bg-amber-900/20 dark:border-amber-800"
-                      : "bg-secondary/50"
-                  }`}
-                >
-                  <p className="text-xs text-muted-foreground mb-1">You Earn</p>
-                  <p
-                    className={`text-2xl font-bold ${
-                      benefit.highlight ? "text-amber-700 dark:text-amber-500" : "text-foreground"
-                    }`}
-                  >
-                    {benefit.mainStat}
-                  </p>
-                  <p className="text-xs text-muted-foreground">{benefit.subStat}</p>
-                </div>
-              </div>
-
               {/* Description */}
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {benefit.description}
@@ -117,7 +90,7 @@ const PartnerSection = () => {
 
         {/* Compliance & Terms Note */}
         <p className="text-center text-sm text-muted-foreground mt-10 max-w-lg mx-auto">
-          Program terms are simple: Earn $10/month for every active $20/month subscription you refer. Payouts are processed monthly via Stripe Connect.
+          Program terms are simple: Earn $10/month for every active $20/month subscription you refer.
         </p>
       </div>
     </section>
