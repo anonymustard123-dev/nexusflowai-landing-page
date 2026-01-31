@@ -22,14 +22,15 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Navigation items with their target section IDs
+  // Updated Navigation items per your request
   const navItems = [
     { name: "Features", href: "#features" },
-    { name: "How it Works", href: "#how-it-works" },
+    { name: "Mobile App", href: "#install" }, // Renamed from Install
     { name: "Pricing", href: "#pricing" },
+    { name: "Affiliate Program", href: "#partner" }, // Renamed from Partner
   ];
 
-  // Smart navigation handler
+  // Smart navigation handler (works from Home OR Terms page)
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
     setIsOpen(false); // Close mobile menu if open
