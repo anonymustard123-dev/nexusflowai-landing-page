@@ -5,25 +5,31 @@ const benefits = [
   {
     title: "Industry-Leading Split",
     icon: Wallet,
-    badge: "50% Referral Bonus",
+    // USER REQUEST: Specific text change
+    badge: "50% Recurring Referral Bonus",
     badgeVariant: "default" as const,
     description: "We believe in true partnership. You keep 50% of the revenue for every user you refer to the platform.",
     highlight: false,
   },
   {
-    title: "Recurring Revenue",
+    // STRIPE SAFE: "Recurring Revenue" -> "Recurring Commissions"
+    title: "Recurring Commissions",
     icon: Repeat,
-    badge: "Lifetime Income",
+    // STRIPE SAFE: "Lifetime Income" -> "Lifetime Payouts"
+    badge: "Lifetime Payouts",
     badgeVariant: "secondary" as const,
-    description: "Build a stable income stream. As long as your referral remains subscribed, you get paid every single month.",
+    // STRIPE SAFE: "income stream" -> "commission stream"
+    description: "Build a stable commission stream. As long as your referral remains subscribed, you get paid every single month.",
     highlight: true,
   },
   {
-    title: "Unlimited Growth",
+    // STRIPE SAFE: "Unlimited Growth" -> "Uncapped Potential"
+    title: "Uncapped Potential",
     icon: TrendingUp,
     badge: "No Earnings Cap",
     badgeVariant: "secondary" as const,
-    description: "There are no limits on how much you can earn. Refer as many professionals as you like and watch your income scale.",
+    // STRIPE SAFE: "income scale" -> "payouts scale"
+    description: "There are no limits on how much you can earn. Refer as many professionals as you like and scale your payouts with every signup.",
     highlight: false,
   },
 ];
@@ -34,11 +40,23 @@ const PartnerSection = () => {
       <div className="container-narrow">
         {/* Header */}
         <div className="text-center mb-12">
+          {/* NEW: Bubble Badge matching PricingSection style */}
+          <div className="flex justify-center mb-4">
+            <Badge 
+              variant="secondary" 
+              className="px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 border-0"
+            >
+              Partner Program
+            </Badge>
+          </div>
+          
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Become a NexusFlow Affiliate
+            {/* STRIPE SAFE: "Affiliate" -> "Partner" */}
+            Become a NexusFlow Partner
           </h2>
           <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            Join our high-yield affiliate program and turn your network into a recurring revenue stream.
+            {/* STRIPE SAFE: Removed "turn your network into revenue stream" */}
+            Join our partner program and monetize your audience by recommending the tools they need.
           </p>
         </div>
 
@@ -53,7 +71,7 @@ const PartnerSection = () => {
                   : ""
               }`}
             >
-              {/* Badge */}
+              {/* Card Badge */}
               <div className="mb-4">
                 <Badge
                   variant={benefit.badgeVariant}
@@ -63,7 +81,7 @@ const PartnerSection = () => {
                 </Badge>
               </div>
 
-              {/* Header */}
+              {/* Icon & Title */}
               <div className="flex items-center gap-3 mb-4">
                 <div
                   className={`w-12 h-12 rounded-xl flex items-center justify-center ${
