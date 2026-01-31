@@ -1,36 +1,35 @@
-import { Wallet, Repeat, TrendingUp } from "lucide-react";
+import { Wallet, TrendingUp } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const benefits = [
   {
     title: "Industry-Leading Split",
     icon: Wallet,
-    // USER REQUEST: Specific text change
-    badge: "50% Recurring Referral Bonus",
+    badge: "50% Referral Bonus",
     badgeVariant: "default" as const,
-    description: "We believe in true partnership. You keep 50% of the revenue for every user you refer to the platform.",
+    description: "We value our partners. You receive 50% of the subscription fee for every user you refer to the platform.",
     highlight: false,
+    isHero: false,
   },
   {
-    // STRIPE SAFE: "Recurring Revenue" -> "Recurring Commissions"
-    title: "Recurring Commissions",
-    icon: Repeat,
-    // STRIPE SAFE: "Lifetime Income" -> "Lifetime Payouts"
+    title: "Monthly Commissions",
+    icon: null, // Replaced by text
+    heroValue: "$10",
+    heroLabel: "Per user / month",
     badge: "Lifetime Payouts",
     badgeVariant: "secondary" as const,
-    // STRIPE SAFE: "income stream" -> "commission stream"
-    description: "Build a stable commission stream. As long as your referral remains subscribed, you get paid every single month.",
+    description: "Earn every month. As long as your referral remains an active subscriber, you continue to receive your bonus.",
     highlight: true,
+    isHero: true,
   },
   {
-    // STRIPE SAFE: "Unlimited Growth" -> "Uncapped Potential"
-    title: "Uncapped Potential",
+    title: "Uncapped Earnings",
     icon: TrendingUp,
-    badge: "No Earnings Cap",
+    badge: "No Limits",
     badgeVariant: "secondary" as const,
-    // STRIPE SAFE: "income scale" -> "payouts scale"
-    description: "There are no limits on how much you can earn. Refer as many professionals as you like and scale your payouts with every signup.",
+    description: "There is no cap on your referrals. Whether you refer 5 users or 500, you are rewarded for every single active account.",
     highlight: false,
+    isHero: false,
   },
 ];
 
@@ -38,25 +37,13 @@ const PartnerSection = () => {
   return (
     <section id="partner" className="section-padding bg-muted">
       <div className="container-narrow">
-        {/* Header */}
+        {/* Header - Headline Hook Implementation */}
         <div className="text-center mb-12">
-          {/* NEW: Bubble Badge matching PricingSection style */}
-          <div className="flex justify-center mb-4">
-            <Badge 
-              variant="secondary" 
-              className="px-4 py-1.5 text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 border-0"
-            >
-              Partner Program
-            </Badge>
-          </div>
-          
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            {/* STRIPE SAFE: "Affiliate" -> "Partner" */}
-            Become a NexusFlow Partner
+            Earn a <span className="text-primary">$10 Monthly Bonus</span> for Every Referral
           </h2>
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto">
-            {/* STRIPE SAFE: Removed "turn your network into revenue stream" */}
-            Join our partner program and monetize your audience by recommending the tools they need.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Join the NexusFlow Affiliate Program. You keep 50% of the recurring subscription revenue for as long as your referral stays active.
           </p>
         </div>
 
@@ -71,7 +58,7 @@ const PartnerSection = () => {
                   : ""
               }`}
             >
-              {/* Card Badge */}
+              {/* Badge */}
               <div className="mb-4">
                 <Badge
                   variant={benefit.badgeVariant}
@@ -81,22 +68,28 @@ const PartnerSection = () => {
                 </Badge>
               </div>
 
-              {/* Icon & Title */}
-              <div className="flex items-center gap-3 mb-4">
-                <div
-                  className={`w-12 h-12 rounded-xl flex items-center justify-center ${
-                    benefit.highlight
-                      ? "bg-amber-100 dark:bg-amber-900/30"
-                      : "bg-primary/10"
-                  }`}
-                >
-                  <benefit.icon
-                    className={benefit.highlight ? "text-amber-600" : "text-primary"}
-                    size={24}
-                  />
-                </div>
-                <h3 className="text-lg font-bold text-foreground">{benefit.title}</h3>
+              {/* Header / Hero Visual */}
+              <div className="mb-6">
+                {benefit.isHero ? (
+                  // Typography Hero Implementation
+                  <div className="py-2">
+                    <span className="block text-5xl font-extrabold text-amber-600 dark:text-amber-500 tracking-tight">
+                      {benefit.heroValue}
+                    </span>
+                    <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+                      {benefit.heroLabel}
+                    </span>
+                  </div>
+                ) : (
+                  // Standard Icon Layout
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-primary/10 mb-4">
+                    {benefit.icon && <benefit.icon className="text-primary" size={24} />}
+                  </div>
+                )}
               </div>
+
+              {/* Title */}
+              <h3 className="text-lg font-bold text-foreground mb-3">{benefit.title}</h3>
 
               {/* Description */}
               <p className="text-sm text-muted-foreground leading-relaxed">
@@ -108,7 +101,7 @@ const PartnerSection = () => {
 
         {/* Compliance & Terms Note */}
         <p className="text-center text-sm text-muted-foreground mt-10 max-w-lg mx-auto">
-          Program terms are simple: Earn $10/month for every active $20/month subscription you refer.
+          Program terms: Earn a $10 monthly referral bonus for every active $20/month subscription attributed to your referral link.
         </p>
       </div>
     </section>
