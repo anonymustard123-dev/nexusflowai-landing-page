@@ -42,7 +42,7 @@ const PricingSection = () => {
               {/* Price */}
               <div className="mb-6">
                 <div className="flex items-baseline gap-2">
-                  <span className="text-5xl sm:text-6xl font-bold text-foreground">$15</span>
+                  <span className="text-5xl sm:text-6xl font-bold text-foreground">$20</span>
                   <span className="text-xl text-muted-foreground">/month</span>
                 </div>
                 <p className="text-muted-foreground mt-2">
