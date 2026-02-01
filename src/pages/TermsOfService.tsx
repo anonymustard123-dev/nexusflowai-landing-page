@@ -8,7 +8,7 @@ const TermsOfService = () => {
       <main className="max-w-4xl mx-auto px-6 py-24 md:py-32">
         <div className="prose prose-slate max-w-none">
           <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 mb-4">Terms of Service</h1>
-          <p className="text-gray-500 mb-8">Last Updated: January 31, 2026</p>
+          <p className="text-gray-500 mb-8">Last Updated: February 1, 2026</p>
 
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
@@ -116,8 +116,9 @@ const TermsOfService = () => {
             <p className="text-gray-700 leading-relaxed">
               If you have any questions regarding these Terms or the Service, please contact us at: <br />
               <strong>NexusFlowAI Administration</strong> <br />
-              Email: <a href="mailto:admin@nexusflowapp.pro" className="text-primary hover:underline">admin@nexusflowapp.pro</a> <br />
-              Location: New York, NY
+              Address: 45-57 Davis Street, Apartment 907, New York, New York 11101 <br />
+              Phone: 813-255-4290 <br />
+              Email: <a href="mailto:admin@nexusflowapp.pro" className="text-primary hover:underline">admin@nexusflowapp.pro</a>
             </p>
           </section>
 
